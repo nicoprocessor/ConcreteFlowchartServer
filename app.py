@@ -39,7 +39,7 @@ def download_short():
 @app.route('/short_summary', methods=['GET'])
 def update_short_summary():
     args = request.args.to_dict()
-    print("Received request params: " + str(args))
+    # print("Received request params: " + str(args))
 
     # append the new data to the previous spreadsheet
     result = append_row_to_spreadsheet(log=args, file_detail=file_suffix[0])
@@ -54,7 +54,7 @@ def update_short_summary():
 @app.route('/full_summary', methods=['GET'])
 def update_full_summary():
     args = request.args.to_dict()
-    print("Received request params: " + str(args))
+    # print("Received request params: " + str(args))
 
     # append the new data to the previous spreadsheet
     result = append_row_to_spreadsheet(log=args, file_detail=file_suffix[1])
@@ -67,5 +67,4 @@ def update_full_summary():
 
 
 if __name__ == '__main__':
-    # read the data so that it's ready to ve converted to pandas dataframe
     app.run()
