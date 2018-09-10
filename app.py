@@ -9,7 +9,7 @@ from file_utils import read_data_from_spreadsheet
 app = Flask(__name__)
 
 # root urls
-localhost_root_url = 'http://127.0.0.1:5000/'
+localhost_root_url = 'http://127.0.0.1:4999/'
 heroku_root_url = "https://concrete-flowchart.herokuapp.com/"
 
 
@@ -67,4 +67,4 @@ def update_full_summary():
 
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=4999)
